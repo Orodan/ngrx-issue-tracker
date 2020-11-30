@@ -1,22 +1,26 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
-  <mat-form-field>
+  <mat-form-field class="full-width">
     <mat-label for="text">Title</mat-label>
     <input matInput formControlName="title" type="text" id="title" />
     <mat-error *ngIf="title?.hasError('required')">Title is required</mat-error>
   </mat-form-field>
 
-  <mat-form-field>
-  <mat-label for="description">Description</mat-label>
-  <input matInput formControlName="description" type="text" id="description" />
-  <mat-error *ngIf="description?.hasError('required')">Description is required</mat-error>
+  <mat-form-field class="full-width">
+    <mat-label for="description">Description</mat-label>
+    <input matInput formControlName="description" type="text" id="description" />
+    <mat-error *ngIf="description?.hasError('required')">Description is required</mat-error>
   </mat-form-field>
 
-  <label for="priority">Priority</label>
-  <select formControlName="priority" id="priority" class="focus:ring-indigo-500 focus:border-indigo-500 h-full py-0 pl-2 pr-7 border-transparent bg-transparent text-gray-500 sm:text-sm rounded-md">
-    <option value="low">Low</option>
-    <option value="medium">Medium</option>
-    <option value="high">High</option>
-  </select>
+  <mat-form-field class="full-width">
+    <mat-label for="priority">Priority</mat-label>
+    <mat-select formControlName="priority">
+      <mat-option value="low">Low</mat-option>
+      <mat-option value="medium">Medium</mat-option>
+      <mat-option value="high">High</mat-option>
+    </mat-select>
+  </mat-form-field>
 
-  <button [disabled]="form.invalid" type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+  <section class="actions">
+    <button mat-flat-button color="primary" [disabled]="form.invalid" type="submit">Submit</button>
+  </section>
 </form>
