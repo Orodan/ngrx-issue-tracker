@@ -16,11 +16,13 @@ export interface Filter {
 
 export interface IssueState {
   entities: Issues;
+  selected: string[];
   filter: Filter;
 }
 
 export const initialState: IssueState = {
   entities: {},
+  selected: [],
   filter: {
     text: '',
   },
