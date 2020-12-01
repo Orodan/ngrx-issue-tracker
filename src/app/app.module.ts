@@ -10,16 +10,14 @@ import { StoreModule } from '@ngrx/store';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { reducers } from 'src/store';
-import { CounterComponent } from './components/counter/counter.component';
 import { modules } from 'src/modules';
 import { NewIssueComponent } from './components/new-issue/new-issue.component';
 import { IssuesComponent } from './components/issues/issues.component';
+import { reducers } from './store';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CounterComponent,
     NewIssueComponent,
     IssuesComponent
   ],
