@@ -1,8 +1,11 @@
 <header>
-  <h1>Issue tracker</h1>
+  <mat-toolbar color="primary">
+    <h1>Issue tracker</h1>
+    <a mat-button routerLink="">Issues</a>
+    <span class="spacer"></span>
+    <button mat-button (click)="reset()">Reset</button>
+  </mat-toolbar>
 
-  <a routerLink="">Issues</a>
-  <button (click)="reset()">Reset</button>
 </header>
 
 <main>
