@@ -14,7 +14,7 @@ import { modules } from 'src/modules';
 import { NewIssueComponent } from './components/new-issue/new-issue.component';
 import { IssuesComponent } from './components/issues/issues.component';
 import { reducers } from './store';
-
+import { resettingMetaReducer } from './store/meta-reducers'
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +26,7 @@ import { reducers } from './store';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    StoreModule.forRoot(reducers),
+    StoreModule.forRoot(reducers, { metaReducers: [resettingMetaReducer] }),
     modules,
     MatInputModule,
     MatSelectModule,

@@ -1,1 +1,10 @@
-<router-outlet></router-outlet>
+<header>
+  <h1>Issue tracker</h1>
+
+  <a routerLink="">Issues</a>
+  <button (click)="reset()">Reset</button>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
