@@ -15,12 +15,14 @@ import { modules } from 'src/modules';
 import { NewIssueComponent } from './components/new-issue/new-issue.component';
 import { IssuesComponent } from './components/issues/issues.component';
 import { reducers } from './store';
-import { resettingMetaReducer } from './store/meta-reducers'
+import { resettingMetaReducer } from './store/meta-reducers';
+import { IssueListComponent } from './components/issue-list/issue-list.component'
 @NgModule({
   declarations: [
     AppComponent,
     NewIssueComponent,
-    IssuesComponent
+    IssuesComponent,
+    IssueListComponent
   ],
   imports: [
     BrowserModule,
