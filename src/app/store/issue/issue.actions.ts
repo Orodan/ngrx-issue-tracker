@@ -12,3 +12,8 @@ export const submit = createAction(
     }
   })
 );
+
+export const setFilter = createAction(
+  '[Issue] set filter',
+  props<{ text: string }>()
+);
