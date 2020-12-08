@@ -35,3 +35,19 @@ export const selectFiltered = createSelector(
   }
 );
 
+export interface IssueStats {
+  total: number;
+  resolved: number;
+}
+
+export const selectStats = createSelector(
+  selectAll,
+  (issues): IssueStats => {
+    const resolvedIssues = issues.filter(issue => issue.resolved);
+
+    return {
+      total: issues.length,
+      resolved: resolvedIssues.length,
+    }
+  }
+);
