@@ -6,5 +6,7 @@
     </h2>
 
     <p>{{ issue.description }}</p>
+
+    <a mat-button [routerLink]="['issue', issue.id]">Go to issue</a>
   </li>
 </ul>

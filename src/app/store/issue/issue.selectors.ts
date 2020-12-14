@@ -1,7 +1,7 @@
 import { createSelector } from '@ngrx/store';
 
 import { RootState } from '..';
-import { Filter, Issue } from '../issue/issue.state';
+import { Filter, Issue, Issues } from '../issue/issue.state';
 
 export const selectFeature = (state: RootState) => state.issue;
 
@@ -50,4 +50,9 @@ export const selectStats = createSelector(
       resolved: resolvedIssues.length,
     }
   }
+);
+
+export const selectOne = createSelector(
+  selectEntities,
+  (entities: Issues, id: string) => entities[id],
 );
