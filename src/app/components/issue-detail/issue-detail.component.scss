@@ -1,0 +1,17 @@
+@import '../../../variables.scss';
+
+:host {
+  display: block;
+  padding: 20px;
+
+  mat-card-header {
+    ::ng-deep .mat-card-header-text {
+      margin: 0;
+    }
+  }
+
+  ::ng-deep mat-card-title {
+    color: mat-color($ngrx-issue-tracker-primary);
+  }
+}
+

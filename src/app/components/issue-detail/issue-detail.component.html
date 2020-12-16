@@ -1,8 +1,8 @@
-<section *ngIf="issue$ | async as issue">
-  <h2>
-    {{ issue.title }}
-    <small>{{ issue.priority }}</small>
-  </h2>
+<mat-card *ngIf="issue$ | async as issue">
+  <mat-card-header>
+    <mat-card-title>{{ issue.title | titlecase }}</mat-card-title>
+    <mat-card-subtitle>{{ issue.priority }}</mat-card-subtitle>
+  </mat-card-header>
 
-  <p>{{ issue.description }}</p>
-</section>
+  <mat-card-content>{{ issue.description }}</mat-card-content>
+</mat-card>

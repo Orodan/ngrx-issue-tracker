@@ -6,6 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
 
 import { StoreModule } from '@ngrx/store';
 
@@ -39,6 +40,7 @@ import { IssueDetailComponent } from './components/issue-detail/issue-detail.com
     MatSelectModule,
     MatButtonModule,
     MatToolbarModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
