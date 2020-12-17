@@ -21,7 +21,16 @@ export interface IssueState {
 }
 
 export const initialState: IssueState = {
-  entities: {},
+  entities: {
+    0: {
+      id: '0',
+      title: 'Mon issue de test',
+      description: 'La description de mon issue de test',
+      priority: 'low',
+      resolved: false,
+
+    }
+  },
   selected: [],
   filter: {
     text: '',

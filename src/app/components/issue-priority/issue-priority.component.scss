@@ -1,0 +1,10 @@
+@import '../../../variables.scss';
+
+:host {
+  display: inline-flex;
+  justify-content: center;
+  border-radius: 16px;
+  padding: 5px 20px;
+  background-color: mat-color($ngrx-issue-tracker-primary);
+  color: #fff;
+}

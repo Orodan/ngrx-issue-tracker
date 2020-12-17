@@ -20,6 +20,7 @@ import { resettingMetaReducer } from './store/meta-reducers';
 import { IssueListComponent } from './components/issue-list/issue-list.component';
 import { IssueSearchComponent } from './components/issue-search/issue-search.component';
 import { IssueDetailComponent } from './components/issue-detail/issue-detail.component';
+import { IssuePriorityComponent } from './components/issue-priority/issue-priority.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { IssueDetailComponent } from './components/issue-detail/issue-detail.com
     IssuesComponent,
     IssueListComponent,
     IssueSearchComponent,
-    IssueDetailComponent
+    IssueDetailComponent,
+    IssuePriorityComponent
   ],
   imports: [
     BrowserModule,

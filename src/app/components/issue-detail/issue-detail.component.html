@@ -1,7 +1,9 @@
 <mat-card *ngIf="issue$ | async as issue">
   <mat-card-header>
     <mat-card-title>{{ issue.title | titlecase }}</mat-card-title>
-    <mat-card-subtitle>{{ issue.priority }}</mat-card-subtitle>
+    <app-issue-priority>
+      {{ issue.priority }}
+    </app-issue-priority>
   </mat-card-header>
 
   <mat-card-content>{{ issue.description }}</mat-card-content>
